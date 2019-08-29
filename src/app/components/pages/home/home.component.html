@@ -1,0 +1,4 @@
+<div class="main__container" #scrollBottom>
+  <add-city-card></add-city-card>
+  <weather-card *ngFor="let city of cities$ | async" [city]="city?.city"></weather-card>
+</div>

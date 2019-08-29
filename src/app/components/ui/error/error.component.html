@@ -1,0 +1,4 @@
+<div class="error-wrapper" [ngClass]="{'error-wrapper-active': errMessage}">
+  <span class="error-message">{{ errMessage }}</span>
+  <button (click)="errMessage = ''" class="error-btn">GOT IT</button>
+</div>

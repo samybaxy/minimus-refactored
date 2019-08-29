@@ -1,0 +1,59 @@
+<div class="main__container">
+  <div class="signup-card">
+    <main class="signup-content">
+      <span class="signup-header">Signup</span>
+      <!-- signup form -->
+
+      <form [formGroup]="signUpForm" class="signup-form" (ngSubmit)="signup()">
+        <input
+          formControlName="username"
+          type="email" 
+          autofocus 
+          placeholder="Email"
+          class="signup-input"
+        >
+        <input 
+          formControlName="password"
+          type="password" 
+          placeholder="Password"
+          class="signup-input"
+        >
+        <div class="btn-spinner-block">
+          <button type="submit" class="signup-btn">Signup</button>
+          <img 
+            *ngIf="loadingSpinner" src="../../../../assets/ripple.apng" 
+            alt="loader-spinner" class="loader-spinner"
+          />
+        </div>
+
+        <div class="social-login-wrapper">
+          <!-- <img 
+            (click)="signInWithFacebook()"
+            src="../../../../assets/fbLogin.png"
+            alt="Facebook Login"
+          /> -->
+          <img 
+            (click)="signInWithGoogle()"
+            src="../../../../assets/googleLogin.png"
+            alt="Google Login"
+          />
+        </div>
+
+      </form>
+      <div class="login-link-wrapper">
+        <span class="login-notice">Already Have an account?</span>
+        <a class="login-link" routerLink="/login">login</a>
+      </div>
+
+    </main>
+
+    <!-- linking to signup -->
+    <aside class="signup-aside">
+      <div class="signup-aside-overlay"></div>
+      <h1 class="signup-welcome-text">Join Minimus Today!</h1>
+      <hr class="signup-aside-hr">
+    </aside>
+  </div>
+</div>
+
+<app-error [message]="errorMessage"></app-error>

@@ -1,0 +1,59 @@
+<div class="main__container">
+  <div class="login-card">
+    <main class="login-content">
+      <span class="login-header">Login</span>
+      <!-- login form -->
+
+      <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login()">
+        <input
+          formControlName="username" 
+          type="email" 
+          autofocus 
+          placeholder="Email" 
+          class="login-input"
+        >
+        <input
+          formControlName="password"
+          type="password" 
+          placeholder="Password" 
+          class="login-input"
+        >        
+        <div class="btn-spinner-block">
+          <button type="submit" class="login-btn">Login</button>
+          <img 
+            *ngIf="loadingSpinner" src="../../../../assets/ripple.apng" 
+            alt="loader-spinner" class="loader-spinner"
+          />
+        </div>
+      </form>
+
+      <div class="social-login-wrapper">
+        <!-- <img 
+          (click)="signInWithFacebook()"
+          src="../../../../assets/fbLogin.png"
+          alt="Facebook Login"
+        /> -->
+        <img 
+          (click)="signInWithGoogle()"
+          src="../../../../assets/googleLogin.png"
+          alt="Google Login"
+        />
+      </div>
+      
+      <div class="signup-link-wrapper">
+        <span class="signup-notice">Don't have an account?</span>
+        <a class="signup-link" routerLink="/signup">Sign up</a>
+      </div>
+
+    </main>
+
+    <!-- linking to signup -->
+    <aside class="login-aside">
+      <div class="login-aside-overlay"></div>
+      <h1 class="login-welcome-text">Welcome Back!</h1>
+      <hr class="login-aside-hr">
+    </aside>
+  </div>
+</div>
+
+<app-error [message]="errorMessage"></app-error>

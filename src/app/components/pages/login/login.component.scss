@@ -1,0 +1,66 @@
+.main__container {
+  width: 90vw;
+}
+
+.social-login-wrapper {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.social-login-wrapper img {
+  margin-top: 1rem;
+  width: 7rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 959px) {
+ main .login-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+ main .social-login-wrapper {
+  margin-top: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+main .social-login-wrapper img {
+  margin-top: 0;
+  width: 10rem;
+}
+
+  main .login-link-wrapper {
+    margin-top: 2rem;
+  }
+
+  main .login-input {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  div.btn-spinner-block .login-btn {
+    margin-top: 0.3rem;
+    width: 10rem;
+    border-radius: 0;
+    padding: 0.7rem;
+  }
+
+  div.btn-spinner-block > img {
+    position: absolute;
+    top: 9%;
+    right: 8%;
+  }
+
+  .signup-link-wrapper {
+    font-size: 0.8em;
+  }
+
+  .signup-link {
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,141 @@
+
+.main__header {
+  background-color: #fff;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.25fr;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  margin: 0;
+  min-height: 4rem;
+  align-items: center;
+  animation: slidedown 0.5s ease-in-out, fadein 1s ease-in-out;
+}
+
+.main__header-dark {
+  background-color: #2B244D;
+  color: white;
+}
+
+.toggle-button__container {
+  cursor: pointer;
+  position: relative;
+  margin: 0 0.45rem 0 0.25rem;
+  display: inline-flex;
+}
+
+.mode-toggle__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.mode-toggle__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mode-toggle__bg {
+  height: 1rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  transition: background-color 300ms linear;
+}
+
+.mode-toggle__circle {
+  height: 1.30rem;
+  width: 1.30rem;
+  background-color: #2B244D;
+  position: absolute;
+  top: -0.18rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(0, 0, 255, 0.5);
+  transition: left 300ms linear;
+  left: -0.1rem;
+}
+
+.mode-toggle__circle-checked {
+  background-color: white;
+  left: 0.9rem;
+}
+
+.mode-toggle__bg-checked {
+  background-color: #FF0070;
+}
+
+.mode-toggle__text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.left__section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr;
+  max-width: 17rem;
+}
+
+.date__text {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  display: inline;
+  margin: 0.5rem 0;
+}
+
+/** SVGs **/
+
+.hamburger__icon {
+  position: relative;
+  z-index: 50;
+  height: 1rem;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.logo__icon {
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+.logo__text {
+  fill: #2B244D;
+}
+
+.logo__text-dark {
+  fill: #ffff;
+}
+
+.hamburger__icon__fill {
+  fill: #2B244D;
+}
+
+.hamburger__icon__fill-dark {
+  fill: #ffff;
+}
+
+@media screen and (max-width: 959px) {
+  .main__header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1rem 0;
+    min-height: 8rem;
+  }
+
+  .left__section {
+    justify-self: start;
+    max-width: none;
+    grid-template-columns: 0 5fr;
+    width: 100%;
+  }
+
+  .logo__icon {
+    margin: 0 auto;
+  }
+
+  .hamburger__icon {
+    margin-right: 0;
+  }
+}

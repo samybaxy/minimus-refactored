@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Minimus';
+  darkModeStyle: boolean = false;
+
+  toggleDarkModeStyle(event: boolean) {
+    this.darkModeStyle = event;
+  }
 }

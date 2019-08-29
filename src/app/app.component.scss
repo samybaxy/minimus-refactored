@@ -1,0 +1,26 @@
+.root__container,
+app-header {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  transition: background 300ms linear;
+  background-image: linear-gradient(to top, #5ee7df 0%, #66a6ff 100%);
+}
+
+app-header {
+  min-height: 0;
+}
+
+.root__container-dark {
+  background: linear-gradient(to bottom, #372865, #000000);
+}
+
+.main-container__bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
