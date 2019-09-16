@@ -22,6 +22,7 @@ import { AddCityComponent } from './components/ui/add-city/add-city.component';
 import { ErrorComponent } from './components/ui/error/error.component';
 
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { environment } from '../environments/environment';
     NguiAutoCompleteModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
